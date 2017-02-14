@@ -34,9 +34,9 @@ function CalcularPrecio ()
         document.getElementById("precioDescuento").value=descuento1*0.90;
 }else if(cantLamp==3){
         document.getElementById("precioDescuento").value=descuento1*0.95;
-}else if(descuento1>120)
-        document.getElementById("precioDescuento").value=(descuento1*0.5)*1.1;
-        alert("Usted pagó " + impuesto + " de IIBB.");
+}else if(impuesto>=120)
+        document.getElementById("precioDescuento").value=impuesto*1.1;
+        alert("Usted pagó " + impuesto*0.1 + " de IIBB.");
 
 
 }
