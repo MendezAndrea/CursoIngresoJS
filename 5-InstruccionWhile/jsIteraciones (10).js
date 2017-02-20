@@ -58,48 +58,53 @@ function Mostrar()
 
 
 	while(confirm("¿Ingresa notas?")){
-		 nota=prompt("Ingrese nota: ");
-			nota=parseInt(nota);
-		while(nota<1 || nota>10){
-			nota=prompt("Ingrese nota: ");
-			nota=parseInt(nota);
-		}
-		contadorTotal++;
-		if(nota>=4){
-			acumuladorNota+=nota;
-			contadorNota++;
-		}
-		if(primera){
-			primera=false;
-			notaMax=nota;
-			notaMin=nota;
-			}else if(nota>notaMax){
-				notaMax=nota;
-			}else if(nota<notaMin){
-				notaMin=nota;
-			}
-				while(sexo!="m" && sexo!="m"){
-				sexo=prompt("Error. Indique su sexo: ");	
-		   		 }if(primeraF){
-				primeraF=false;
-				notaMaxF=nota;
-				}else{
-				if(nota>notaMaxF){
-					notaMaxF=nota;
+				 nota=prompt("Ingrese nota: ");
+				 nota=parseInt(nota);
+				 while(nota<1 || nota>10){
+					 nota=prompt("Ingrese nota: ");
+					 nota=parseInt(nota);
+					}
+					contadorTotal++;
+					if(nota>=4){
+						acumuladorNota+=nota;
+						contadorNota++;
+					}
+					if(primera){
+						primera=false;
+						notaMax=nota;
+						notaMin=nota;
+					}else if(nota>notaMax){
+						notaMax=nota;
+					}else if(nota<notaMin){
+						notaMin=nota;
+					}
+					while(sexo!="f" && sexo!="m"){
+						sexo=prompt("Indique sexo del alumno: ");	
+						if(primeraF){
+							primeraF=false;
+							notaMaxF=nota;
+						}else{
+							if(nota>notaMaxF){
+								notaMaxF=nota;
+							}
+						}
+						if(primeraM){
+							primeraM=false;
+							notaMaxM=nota;
+						}else{
+							if(nota>notaMaxM){
+								notaMaxM=nota;
+							}
+						}
+					}
 				}
-			}
-			if(primeraM){
-				primeraM=false;
-				notaMax=nota;
-			}else{
-				if(nota>notaMaxM){
-					notaMaxM=note;
-			
-				}
-			}
 	
-	alert("Cantidad de alumnos aprobados: " + contadorNota);
-	alert("Promedio de notas total: " + acumuladorNota/contadorTotal);
-	alert("Nota máxima: " + notaMax);
-	alert("Nota mínima: " + notaMin);
+	msj= "Cantidad de alumnos aprobados: " + contadorNota + "<br>";
+	msj+="Promedio de notas total: " + acumuladorNota/contadorTotal + "<br>";
+	msj+="Nota máxima: " + notaMax + "<br>";
+	msj+="Nota mínima: " + notaMin + "<br>";
+	msj+="Nota máxima mujer: " + notaMaxF + "<br>";
+	msj+="Nota máxima hombre: " + notaMaxM + "<br>";
+
+	document.write(msj);
 }//FIN DE LA FUNCIÓN
