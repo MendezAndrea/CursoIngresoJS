@@ -5,7 +5,16 @@ function Mostrar()
 	var positivo=0;
 	var negativo=1;
 	
-	var respuesta='si';
+	while(confirm("¿Desea continuar?")){
+		contador++;
+		numero=prompt("Ingrese un número: ");
+		numero=parseInt(numero);
+		if(numero>=0){
+			positivo+=numero;
+		}else{
+			negativo*=numero;
+		}
+	}
 
 
 document.getElementById('suma').value=positivo;
