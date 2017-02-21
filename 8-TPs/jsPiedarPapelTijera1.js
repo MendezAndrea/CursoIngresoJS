@@ -17,7 +17,7 @@ function comenzar()
 }//FIN DE LA FUNCIÓN
 function piedra()
 { 
-    comenzar();
+    comenzar(); //Llamamos la función para que tome un número distinto luego de cada alert.
 
     if(eleccionMaquina==1){
         alert("Empate.");
@@ -26,7 +26,15 @@ function piedra()
     }else{
         alert("Ganó.");
     }
-    
+    //-----Otra forma de hacerlo con SWITCH----
+    /*swtich(eleccionMaquina){
+        case 1:
+                alert("Empate.");
+        case2:
+                alert("Perdió.");
+        default:
+                alert("Ganó.");
+            }*/
     
 }//FIN DE LA FUNCIÓN
 function papel()

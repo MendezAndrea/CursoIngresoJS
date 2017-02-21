@@ -9,5 +9,5 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    var edad= prompt("Ingrese la edad: ").value;
 }

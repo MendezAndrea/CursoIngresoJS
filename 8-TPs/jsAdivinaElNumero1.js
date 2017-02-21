@@ -8,7 +8,8 @@ secreto del 1 al 100, en la pantalla del juego
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
 var numeroSecreto; 
-var contadorIntentos;
+var contadorIntentos=0;
+
 
 function comenzar()
 {
@@ -22,10 +23,11 @@ function comenzar()
 
 function verificar()
 {
-  contadorIntentos=contadorIntentos+1;
+  contadorIntentos++;
 	var numero= document.getElementById("numero").value;
   if(numeroSecreto==numero){
     alert("¡Usted es el ganador!");
+    document.getElementById("intentos").value=contadorIntentos;
   }else if(numeroSecreto<numero){
     alert("¡Se pasó!");
   }else{
